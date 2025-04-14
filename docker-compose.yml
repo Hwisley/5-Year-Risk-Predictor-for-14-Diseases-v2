@@ -1,0 +1,37 @@
+version: '1.0'
+
+services:
+  api:
+    image: api
+#    container_name: api
+    networks:
+      - hs-network
+
+  hs_autoupdater:
+    image: hs_autoupdater
+#    container_name: hs_autoupdater
+    volumes:
+      - ${hs_main_dir}:/app/src
+    environment:
+      - DB_HOST=hs_db
+      - DB_USER=SA
+      - DB_PASSWORD=${DB_PWD}
+    networks:
+      - hs-network
+
+  hs_db:
+    image: hs_db
+#    container_name: hs_db
+#    ports:
+#       - "1433:1433"
+    volumes:
+      - ${hs_db_dir}:/mnt
+    environment:
+      - SA_PASSWORD=${DB_PWD}
+    networks:
+      - hs-network
+
+networks:
+  hs-network:
+    driver: bridge
+ du
