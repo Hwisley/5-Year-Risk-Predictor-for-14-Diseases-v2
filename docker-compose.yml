@@ -1,37 +1,42 @@
-version: '1.0'
+version: '3.0'
 
 services:
-  api:
-    image: api
-#    container_name: api
+  hc_api:
+    image: hc_api
+    container_name: hc_api:v2.0
+    restart: unless-stopped
+    ports:
+      - "9999:9999"
     networks:
-      - hs-network
+      - hc-network
 
-  hs_autoupdater:
-    image: hs_autoupdater
-#    container_name: hs_autoupdater
+  hc_autoupdater:
+    image: hc_autoupdater:v2.1
+    container_name: hc_autoupdater
+    restart: unless-stopped
     volumes:
-      - ${hs_main_dir}:/app/src
+      - ${HC_MAIN_DIR}:/app/src
     environment:
-      - DB_HOST=hs_db
-      - DB_USER=SA
-      - DB_PASSWORD=${DB_PWD}
+      - DB_HOST=${HC_DB_NAME}
+      - DB_USER=${HC_DB_USER}
+      - DB_PASSWORD=${HC_DB_PASSWORD}
     networks:
-      - hs-network
+      - hc-network
 
-  hs_db:
-    image: hs_db
-#    container_name: hs_db
-#    ports:
-#       - "1433:1433"
+  hc_db:
+    image: hc_db:v2.3
+    container_name: hc_db
+    restart: unless-stopped
     volumes:
-      - ${hs_db_dir}:/mnt
+      - ${HC_DB_DIR}:/mnt
     environment:
-      - SA_PASSWORD=${DB_PWD}
+      - SA_PASSWORD=${HC_DB_PASSWORD}
     networks:
-      - hs-network
+      - hc-network
+    ports:
+      - "1433:1433"
 
 networks:
-  hs-network:
+  hc-network:
     driver: bridge
- du
+
