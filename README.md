@@ -2,9 +2,13 @@
 
 ## Table of Contents
 - [Project Overview](#project-overview)
-- [Key Client Requirements](#key-client-requirements)
 - [Initial Development Contributions](#initial-development-contributions)
+  - [Key Client Requirements](#key-client-requirements)
+  - [System Architecture](#system-architecture)
+  - [Key Contributions](#key-contributions)
+  - [Class Diagram](#class-diagram)
 - [Refactoring: Docker-based Deployment Enhancement](#refactoring-docker-based-deployment-enhancement)
+  - [Refactoring Highlights](#refactoring-highlights)
 
 ## Project Overview
 
@@ -12,7 +16,13 @@ This project aims to predict the probability of developing **14 types of cancer 
 While the machine learning model was already developed, I was responsible for the **entire system design, development, and deployment** around it.  
 As a personal project, I later refactored the system to enhance deployment and operational efficiency using Docker.
 
-## Key Client Requirements
+## Initial Development Contributions
+
+**Project Duration:** Jan 2023 – Apr 2023
+
+**Tech Stack:**  Python (PyQt, Flask) · Pandas/NumPy · MariaDB/MSSQL · HTML/CSS/JavaScript · FTP · Ubuntu
+
+### Key Client Requirements
 
 The client requested the following core features:
 
@@ -21,19 +31,14 @@ The client requested the following core features:
 3. PDF generation program
 4. Automatic output of result PDFs
 
-## System Architecture
+### System Architecture
 
 The following diagram shows the overall structure of the system:
 
 ![image](https://github.com/user-attachments/assets/e0a37914-4d16-4eee-b059-194c702e08a0)
 
-## Initial Development Contributions
 
-**Project Duration:** Jan 2023 – Apr 2023
-
-**Tech Stack:**  Python (PyQt, Flask) · Pandas/NumPy · MariaDB/MSSQL · HTML/CSS/JavaScript · FTP · Ubuntu
-
-**Key Contributions:**
+### Key Contributions
 
 - Attended client meetings to **gather requirements**, and led the **system design and development**.
 - Prevented two potential conflicts by **writing and version-controlling a requirements document**, clarifying the contract scope.
@@ -54,7 +59,7 @@ The following diagram shows the overall structure of the system:
 
 **Tools & Skills:**  Docker · Docker Compose · Cron · Python · MSSQL
 
-**Refactoring Highlights:**
+### Refactoring Highlights
 
 - Refactored the system as a personal project to improve deployment and maintenance.
 - Containerized a Flask-based ML auto-update system and MSSQL databases for scalable deployment.
