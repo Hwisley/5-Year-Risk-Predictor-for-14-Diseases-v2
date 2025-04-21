@@ -3,9 +3,7 @@
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Key Client Requirements](#key-client-requirements)
-- [System Architecture](#system-architecture)
 - [Initial Development Contributions](#initial-development-contributions)
-- [Class Diagram](#class-diagram)
 - [Refactoring: Docker-based Deployment Enhancement](#refactoring-docker-based-deployment-enhancement)
 
 ## Project Overview
@@ -31,8 +29,9 @@ The following diagram shows the overall structure of the system:
 
 ## Initial Development Contributions
 
-**Tech Stack:**  
-Python (PyQt, Flask) · Pandas/NumPy · MariaDB/MSSQL · HTML/CSS/JavaScript · FTP · Ubuntu
+**Project Duration:** Jan 2023 – Apr 2023
+
+**Tech Stack:**  Python (PyQt, Flask) · Pandas/NumPy · MariaDB/MSSQL · HTML/CSS/JavaScript · FTP · Ubuntu
 
 **Key Contributions:**
 
@@ -51,12 +50,13 @@ Python (PyQt, Flask) · Pandas/NumPy · MariaDB/MSSQL · HTML/CSS/JavaScript · 
 
 ## Refactoring: Docker-based Deployment Enhancement
 
-**Tools & Skills:**  
-Docker · Docker Compose · Cron · Python · MSSQL
+**Project Duration:** Mar 2025 – Apr 2025
+
+**Tools & Skills:**  Docker · Docker Compose · Cron · Python · MSSQL
 
 **Refactoring Highlights:**
 
-- Refactored the system to improve deployment and maintenance for the 5-year disease prediction solution.
+- Refactored the system as a personal project to improve deployment and maintenance.
 - Containerized a Flask-based ML auto-update system and MSSQL databases for scalable deployment.
 - Eliminated memory leaks by replacing a persistent Python script with an OS-level cron scheduler.
 - Implemented container orchestration and automated multi-service deployment using Docker Compose, enhancing operational efficiency.
